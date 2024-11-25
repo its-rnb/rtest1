@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+// import AxTest from './comps/AxTest';
+// import AxTest1 from './comps/AxTest1';
+// import Pgntn from './comps/Pgntn';
+// import SWatch from './comps/SWatch';
+// import CPalette from './comps/CPalette'
+// import Counter from './comps/Counter';
+// import ApiTest from "./comps/ApiTest";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(){
+ return (
+
+  <div className='main-container'>
+  
+  {/* <div className='app-axios-test'><AxTest /></div> */}
+  {/* <div className='app-axios-test1'><AxTest1 /></div> */}
+  {/* <div className='app-swatch'><SWatch /></div> */}
+  {/* <div className='app-pagination-test'><Pgntn /></div> */}
+  {/* <div className='app-color-palette'><CPalette /></div> */}
+  {/* <div className='app-counter'><Counter /></div> */}
+  {/* <div className='app-api-test'><ApiTest /></div> */}
+
+  <h5>done</h5>
+  </div>
+
+ )
 }
 
 export default App;
