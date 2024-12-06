@@ -3,33 +3,27 @@ import axios from "axios";
 
 function ApiTest(){
 
-    const [data, setData]= useState([])
+    const[data, setData]= useState([])
 
-    useEffect(()=> {
-    axios.get("https://jsonplaceholder.typicode.com/todos")
-    .then(res=> setData(res.data))
-    .catch(er=> console.log(er))
-    }, [])
+    useEffect(()=>{
+      axios.get('https://jsonplaceholder.typicode.com/todos')
+      .then(res=> setData(res.data))
+      .then(er=> console.error(er))
+    },[])
 
     return(
-        <div className="api=table">
-        <table>
+        <div className="api-table-main">
+          <table>
             <thead>
-  <tr>
-    <th>Id</th>
-    <th>Title</th>
-  </tr>
-  </thead>
-  <tbody>
-  
-    {
-        data.map((d,i)=> <tr><td key={d.id}>{d.id}</td>  <td key={d.id}>{d.title}</td> </tr>)
-    }
-  
-  <tr>
-  </tr>
-  </tbody>
-</table>
+              <tr>
+                <th>Id</th>
+                <th>Title</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.map((d)=> <tr><td>{d.id}</td><td>{d.title}</td></tr>)}
+            </tbody>
+          </table>
         </div>
 )   
 }

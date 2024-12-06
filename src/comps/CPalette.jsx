@@ -36,18 +36,18 @@ function CPalette(){
         //loop to apply color to 5 random boxes
         for(let i=0; i<5; i++){
             
-            //get random index from avlbl indices arr
-            const rdmIndex= Math.floor(Math.random()*avlbInd.length);
+          //get random index from avlbl indices arr
+          const rdmIndex= Math.floor(Math.random()*avlbInd.length);
 
-            //use chosen random index to get a grid box index and remove it from avlblIndices
-            //remove so the number doesn't re-occur(repeat)
-            const gridIndex= avlbInd.splice(rdmIndex, 1)[0]
+          //use chosen random index to get a grid box index and remove it from avlblIndices
+          //remove so the number doesn't re-occur(repeat)
+          const gridIndex= avlbInd.splice(rdmIndex, 1)[0]
 
-            //update color of chosen grid in box of main grid
-            mainGridCol[gridIndex]= color
+          //update color of chosen grid in box of main grid
+          mainGridCol[gridIndex]= color
 
-            //store index of colored box
-            newColInd.push(gridIndex)
+          //store index of colored box
+          newColInd.push(gridIndex)
         }
 
         //update state with new grid colors
