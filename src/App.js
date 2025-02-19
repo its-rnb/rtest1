@@ -10,8 +10,10 @@
 // import PrntComp from "./comps/PrntComp";
 // import RouterTest from "./comps/RouterTest";
 // import RdxTest from "./comps/ReduxTest";
-// import SearchFnc from "./comps/DbncTest";
+// import DbncTest from "./comps/DbncTest";
 // import MouseMove from "./comps/Thrttl";
+// import CmpntTest from "./comps/CmpntTest";
+import ToDo from "./comps/ToDo";
 
 function App(){
  return (
@@ -30,8 +32,10 @@ function App(){
   {/* <div className="app-props-test"><PrntComp /></div> */}
   {/* <div className="app-router-test"><RouterTest /></div> */}
   {/* <div className="app-redux-test"><RdxTest /></div> */}
-  {/* <div className="app-debounce-test"><SearchFnc /></div> */}
+  {/* <div className="app-debounce-test"><DbncTest /></div> */}
   {/* <div className="app-throttle-test"><MouseMove /></div> */}
+  {/* <div className="app-count-test"><CmpntTest /></div> */}
+  <div><ToDo /></div>
 
   <h5>done</h5>
   </div>

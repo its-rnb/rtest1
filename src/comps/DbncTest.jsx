@@ -1,24 +1,22 @@
-const SearchFnc= ()=> {
-    
-    function hndlChange(e){
-        console.log('api call...')
+const DbncTest= ()=> {
+
+    function handleChange(){
+        console.log('Debounce occurred')
     }
 
-    return (
+    function debounce(fn, delay){
+        let timer
+        return (...args)=>{
+        clearTimeout(timer)
+        timer= setTimeout(()=> fn(...args), delay)}
+    }
+
+    return(
         <div>
-            <h1>Debounce test</h1>
+            <h1>Debounce Test</h1>
             <p>Search</p>
-            <input type="text" onChange={debounce(hndlChange, 1000)} title="search-field" />
+            <input onChange={debounce(handleChange, 1000)}/>
         </div>
     )
 }
-
-function debounce(fn, delay){
-    let timer
-    return function(...args){
-        clearTimeout(timer)
-        timer= setTimeout(()=> fn(...args), delay)
-    }
-}
-
-export default SearchFnc
+export default DbncTest

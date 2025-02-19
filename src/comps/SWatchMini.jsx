@@ -1,17 +1,12 @@
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef } from 'react';
 
-function SWatchMini(){
+const SWatchMini= ()=> {
 
-    const [count, setCount]= useState(0)
-    const [active, setActive]= useState(0)
+    const[count, setCount]= useState(0)
+    const[active, setActive]= useState(false)
     const timer= useRef()
 
-    const format= ()=> {
-        let t= count %1000;
-        return t;
-    }
-
-    useEffect(()=>{
+    useEffect(()=> {
         if(active){
             timer.current= setInterval(()=> {
                 setCount(prev=> prev+1)
@@ -21,14 +16,17 @@ function SWatchMini(){
         return ()=> clearInterval(timer.current)
     })
 
-    return (
+    const format= ()=>{
+        return count%1000
+    }
+
+    return(
         <div>
-            <h2>{format(count)}</h2>
+            <h3>{format(count)}</h3>
             <button onClick={()=> setActive(true)}>Start</button>
-            <button onClick={()=> setActive(false)} disabled={count===0}>Stop</button>
-            <button onClick={()=> {setActive(false); setCount(0);}} disabled={count===0}>Reset</button>
+            <button onClick={()=> setActive(false)}>Stop</button>
+            <button onClick={()=> {setActive(false); setCount(0)}}>Reset</button>
         </div>
     )
 }
-
 export default SWatchMini
