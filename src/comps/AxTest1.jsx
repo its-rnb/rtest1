@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import axios from 'axios';
 
 const AxTest1= ()=> {
 
-    const apiURL='https://datausa.io/api/data?drilldowns=Nation&measures=Population';
-
-    const [data, setData]= useState([]);
+    const [data, setData]= useState([])
+    const url= ['https://datausa.io/api/data?drilldowns=Nation&measures=Population', 'https://dummyjson.com/users'];
 
     const getData= async()=> {
 
-        try {
-            const res= await axios.get(apiURL);
-            console.log(res);
-            setData(res.data.data);
-        } catch (err) {
-            console.log(err)
+        try{
+            const res= await axios.get(url[1])
+            console.log(res)
+            setData(res.data.users)
+        }
+        catch(er){
+            console.log(er)
         }
     }
 
@@ -22,14 +22,16 @@ const AxTest1= ()=> {
         getData();
     }, [])
 
-    return(
-        <div className="main-atest1">
-            <h2>Axios test 1</h2>
-            {
-                data.map((d,i)=> <li key={i}>{d.Year}</li>)
-            }
+    return (
+        <div>
+            <h1>Axios Test 1</h1>
+            <div>
+                <ul>
+                    {data.map((d, idx)=> <li key={idx}>{d.firstName}</li>)}
+                </ul>
+            </div>
         </div>
     )
 }
 
-export default AxTest1;
+export default AxTest1

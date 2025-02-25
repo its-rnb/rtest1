@@ -13,7 +13,7 @@
 // import DbncTest from "./comps/DbncTest";
 // import MouseMove from "./comps/Thrttl";
 // import CmpntTest from "./comps/CmpntTest";
-import ToDo from "./comps/ToDo";
+// import ToDo from "./comps/ToDo";
 
 function App(){
  return (
@@ -35,7 +35,7 @@ function App(){
   {/* <div className="app-debounce-test"><DbncTest /></div> */}
   {/* <div className="app-throttle-test"><MouseMove /></div> */}
   {/* <div className="app-count-test"><CmpntTest /></div> */}
-  <div><ToDo /></div>
+  {/* <div><ToDo /></div> */}
 
   <h5>done</h5>
   </div>
