@@ -11,7 +11,7 @@
 // import RouterTest from "./comps/RouterTest";
 // import RdxTest from "./comps/ReduxTest";
 // import DbncTest from "./comps/DbncTest";
-import MouseMove from "./comps/Thrttl";
+// import MouseMove from "./comps/Thrttl";
 // import CmpntTest from "./comps/CmpntTest";
 // import ToDo from "./comps/ToDo";
 
@@ -33,7 +33,7 @@ function App(){
   {/* <div className="app-router-test"><RouterTest /></div> */}
   {/* <div className="app-redux-test"><RdxTest /></div> */}
   {/* <div className="app-debounce-test"><DbncTest /></div> */}
-  <div className="app-throttle-test"><MouseMove /></div>
+  {/* <div className="app-throttle-test"><MouseMove /></div> */}
   {/* <div className="app-count-test"><CmpntTest /></div> */}
   {/* <div><ToDo /></div> */}
 
