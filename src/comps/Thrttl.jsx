@@ -1,20 +1,19 @@
-const MouseMove= ()=> {
-    console.log('mouse moved')
+const Thrttl= ()=> {
+    console.log("Mouse moved, throttling occured")
 }
-
-window.addEventListener('mousemove', throttle(MouseMove, 1000))
 
 function throttle(fn, delay){
-    
+
     let run= false
-    return (...args)=>{
+    return (...args)=> {
         if(!run){
-            fn(...args)
-            run= true;
-            setTimeout(()=> {run= false}, delay)
+            fn(args)
+            run= true
+            setTimeout(()=> {return run= false}, delay)
         }
     }
-
 }
 
-export default MouseMove
+window.addEventListener('mousemove', throttle(Thrttl, 3000))
+
+export default Thrttl
