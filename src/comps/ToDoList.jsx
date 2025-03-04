@@ -3,7 +3,7 @@ import '../styles/ToDoList.css'
 
 function ToDoList(){
 
-    const [item, setItem]= useState(["Task 1", "Task 2"]);
+    const [item, setItem]= useState([{task: "Task 1", status: true}, {task: "Task 2", status: false}]);
     const [newItem, setNewItem]= useState('');
 
     const handleIp= (e)=> {
@@ -13,7 +13,7 @@ function ToDoList(){
     const addItem= ()=> {
         if(newItem.trim() !== ""){
             //update using updater func by using prev state of item "item" rep by "it"
-            setItem(it=> [...it, newItem]);
+            setItem(it => [...it, { task: newItem, status: false }]);
             setNewItem("");
         }
     }
@@ -39,6 +39,12 @@ function ToDoList(){
         }
     }
 
+    const toggleStatus = (idx) => {
+        //true-> done(completed)
+        const updatedItems = [...item];
+        updatedItems[idx].status = !updatedItems[idx].status;
+        setItem(updatedItems);
+    };
     
     return (
         <div className="toDoList-main">
@@ -52,7 +58,8 @@ function ToDoList(){
             <ul>
                 {item.map((it, idx)=>
                 <li key={idx}>
-                    <span className="text">{it}</span>
+                    <span className="text" style={{textDecoration: it.status ? "line-through" : ""}}>{it.task}</span>
+                    <button className="cmp-btn" onClick={()=> toggleStatus(idx)}>{it.status ? "Undone" : "Done"}</button>
                     <button className="del-btn" onClick={()=> delItem(idx)}>Delete</button>
                     <button className="move-btn" onClick={()=> moveItemUp(idx)}>⬆</button>
                     <button className="move-btn" onClick={()=> moveItemDown(idx)}>⬇</button>
