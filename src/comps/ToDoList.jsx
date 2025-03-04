@@ -40,7 +40,7 @@ function ToDoList(){
     }
 
     const toggleStatus = (idx) => {
-        //true-> done(completed)
+        //true-> done(task completed)
         const updatedItems = [...item];
         updatedItems[idx].status = !updatedItems[idx].status;
         setItem(updatedItems);
