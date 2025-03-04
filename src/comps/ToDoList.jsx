@@ -1,10 +1,20 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import '../styles/ToDoList.css'
+import itemData from '../data/items.json'
 
 function ToDoList(){
 
-    const [item, setItem]= useState([{task: "Task 1", status: true}, {task: "Task 2", status: false}]);
+    const [item, setItem]= useState([...itemData]);
     const [newItem, setNewItem]= useState('');
+
+    useEffect(() => {
+        const savedItems = localStorage.getItem('items');
+        if (savedItems) {
+            setItem(JSON.parse(savedItems)); // Parse and set the saved items
+        } else {
+            setItem(itemData); // Fallback to initial items if nothing is saved
+        }
+    }, []);
 
     const handleIp= (e)=> {
         setNewItem(e.target.value)
@@ -45,6 +55,11 @@ function ToDoList(){
         updatedItems[idx].status = !updatedItems[idx].status;
         setItem(updatedItems);
     };
+
+    const saveData= ()=> {
+        localStorage.setItem('items', JSON.stringify(item));
+        console.log("Items saved to localStorage.");
+    }
     
     return (
         <div className="toDoList-main">
@@ -66,6 +81,8 @@ function ToDoList(){
                 </li>)}
             </ul>
 
+            <button className="save-btn" onClick={saveData}>Save items</button>
+            
         </div>
     )
 }
