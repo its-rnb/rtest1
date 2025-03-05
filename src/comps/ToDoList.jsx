@@ -14,7 +14,7 @@ function ToDoList(){
         } else {
             setItem(itemData); // Fallback to initial items if nothing is saved
         }
-    }, []);
+    });
 
     const handleIp= (e)=> {
         setNewItem(e.target.value)
