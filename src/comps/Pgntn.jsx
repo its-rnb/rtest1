@@ -19,6 +19,7 @@ function Pgntn(){
 
     let pl= prd.length
 
+    //to render selected page
     function pageHandler(selectedPage){
         if(selectedPage>=1 && selectedPage<=pl/10)setPage(selectedPage)
     }
