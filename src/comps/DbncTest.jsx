@@ -1,21 +1,22 @@
 const DbncTest= ()=> {
 
-    function dbLog(){
-        console.log("Debounce occured")
+    function dbcLog(){
+        console.log("Debounce occured");
     }
 
     function debounce(fn, delay){
 
         let timer
-        return (...args)=>{
-            clearTimeout(timer)
+        return(...args)=> {
+            clearTimeout(timer);
             timer= setTimeout(()=> fn(args), delay)
         }
     }
+
     return (
-        <div>
-            <h1> Debounce Test</h1>
-            <span>Search: <input placeholder="Enter text" onChange={debounce(dbLog, 2500)} /></span>
+        <div className="debounce-main">
+            <h1>Debounce test</h1>
+            <input placeholder="Enter text" onChange={debounce(dbcLog, 2000)}/>
         </div>
     )
 }

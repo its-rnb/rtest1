@@ -4,8 +4,8 @@
 //return new 'WrppdComp'(HOC) with props
 const WithLog= (WrappedComp)=> {
     return (props)=> {
-        console.log('Component with log: ' +WrappedComp.name)
-        return <WrappedComp {...props}/>
+        console.log("Component with log: " +WrappedComp.name);
+        return <WrappedComp {...props} />
     }
 }
 
@@ -22,7 +22,7 @@ const EnhancedComp= WithLog(BaseComp)
 //Main HOC for usage
 //EnhancedComp with new WrppdComp accessed
 //Hello returned as props.text
-const MainHOC= ()=> {
-    return <EnhancedComp text="High Order Comp" />
+const HOComp= ()=> {
+    return <EnhancedComp text="High Order Component" />
 }
-export default MainHOC
+export default HOComp

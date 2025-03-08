@@ -4,14 +4,14 @@
 // import SWatchMini from "./comps/SWatchMini";
 // import Pgntn from './comps/Pgntn';
 // import CPalette from './comps/CPalette'
-// import Counter from './comps/Counter';
+import Counter from './comps/Counter';
 // import ApiTest from "./comps/ApiTest";
 // import HOComp from "./comps/HiOrdComp";
 // import PrntComp from "./comps/PrntComp";
 // import RouterTest from "./comps/RouterTest";
 // import RdxTest from "./comps/ReduxTest";
 // import DbncTest from "./comps/DbncTest";
-// import MouseMove from "./comps/Thrttl";
+// import Thrtl from "./comps/Thrttl";
 // import CmpntTest from "./comps/CmpntTest";
 // import ToDo from "./comps/ToDo";
 // import ToDoList from "./comps/ToDoList";
@@ -27,14 +27,14 @@ function App(){
   {/* <div className='app-swatch-mini'><SWatchMini /></div> */}
   {/* <div className='app-pagination-test'><Pgntn /></div> */}
   {/* <div className='app-color-palette'><CPalette /></div> */}
-  {/* <div className='app-counter'><Counter /></div> */}
+  <div className='app-counter'><Counter /></div>
   {/* <div className='app-api-test'><ApiTest /></div> */}
   {/* <div className='app-HOC-test'><HOComp /></div> */}
   {/* <div className="app-props-test"><PrntComp /></div> */}
   {/* <div className="app-router-test"><RouterTest /></div> */}
   {/* <div className="app-redux-test"><RdxTest /></div> */}
   {/* <div className="app-debounce-test"><DbncTest /></div> */}
-  {/* <div className="app-throttle-test"><MouseMove /></div> */}
+  {/* <div className="app-throttle-test"><Thrtl /></div> */}
   {/* <div className="app-count-test"><CmpntTest /></div> */}
   {/* <div className="app-todo-test"><ToDo /></div> */}
   {/* <div className="app-todoList"><ToDoList /></div> */}

@@ -58,7 +58,7 @@ function CPalette(){
     }
 
     return(
-        <div className='color-plt'>
+        <div className='color-plt' style={{backgroundColor: 'gray', padding: '75px'}}>
             {/* Main grid displaying 25 boxes */}
       <div className="main-grid">
         {gridColor.map((color, index) => (
