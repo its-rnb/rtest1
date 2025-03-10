@@ -20,7 +20,7 @@ const AxTest1= ()=> {
 
     useEffect(()=> {
         getData();
-    }, [])
+    })
 
     return (
         <div>
