@@ -27,6 +27,4 @@ function ApiTest(){
         </div>
 )   
 }
-
-
 export default ApiTest
