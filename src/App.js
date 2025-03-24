@@ -4,7 +4,7 @@
 // import SWatchMini from "./comps/SWatchMini";
 // import Pgntn from './comps/Pgntn';
 // import CPalette from './comps/CPalette'
-import Counter from './comps/Counter';
+// import Counter from './comps/Counter';
 // import ApiTest from "./comps/ApiTest";
 // import HOComp from "./comps/HiOrdComp";
 // import PrntComp from "./comps/PrntComp";
@@ -27,7 +27,7 @@ function App(){
   {/* <div className='app-swatch-mini'><SWatchMini /></div> */}
   {/* <div className='app-pagination-test'><Pgntn /></div> */}
   {/* <div className='app-color-palette'><CPalette /></div> */}
-  <div className='app-counter'><Counter /></div>
+  {/* <div className='app-counter'><Counter /></div> */}
   {/* <div className='app-api-test'><ApiTest /></div> */}
   {/* <div className='app-HOC-test'><HOComp /></div> */}
   {/* <div className="app-props-test"><PrntComp /></div> */}
